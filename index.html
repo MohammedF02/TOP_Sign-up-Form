@@ -20,7 +20,7 @@
             </div>
             <p>Photo by <a href="https://unsplash.com/@svsokolov">Sergey Sokolov</a> on Unsplash</p>
         </div>
-        <div class="login-side">
+        <div class="signup-side">
             <div class="header">
                 <div>
                     <p>This is not a real online service! You know you need something like this in your life to help you
@@ -32,12 +32,57 @@
                 <div class="form-section">
                     <p>Let's do this!</p>
                     <form id="form">
-                        
+                        <div class="input">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" id="first-name" required>
+                        </div>
+                        <div class="input">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" id="last-name" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="input">
+                            <label for="phone">Phone Number</label>
+                            <input type="" name="phone" id="phone">
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" minlength="8" required>
+                        </div>
+                        <div class="input">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" minlength="8" required>
+                        </div>
+                        <div>
+                            <button type="submit">Create Account</button>
+                        </div>
                     </form>
+                    <div class="log-in">
+                        <p>Already have an account?</p><a href="#">Log in</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("confirmPassword");
+
+        function validate() {
+            if (password.value != confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match!");
+            } else {
+                confirmPassword.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validate;
+        password.onkeyup = validate;
+    </script>
 </body>
 
 </html>
