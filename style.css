@@ -46,15 +46,80 @@ a {
     color: white;
 }
 
-.login-side {
+.signup-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5em;
 }
 
 .header {
+    padding-left: 3em;
     width: 65%;
     font-size: 1.5rem;
     font-weight: bolder;
+}
+
+.form-section {
+    box-shadow: 10px 5px 5px 5px lightgray;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-left: 4em;
+}
+
+.form-section p{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+form {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-top: 15px;
+    width: 50%;
+}
+
+input {
+    width: 60%;
+    border-radius: 0.5em;
+    height: 1.5rem;
+}
+
+input:focus {
+    box-shadow: 5px 5px 5px gray;
+}
+
+button {
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    padding: 15px 3em 15px 3em;
+    border-radius: 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+.log-in p{
+    font-size: large;
+}
+
+.log-in a {
+    font-size: large;
+    font-weight: bolder;
+    color: #596D48;
+    text-decoration: none;
+    padding-top: 1em;
 }
